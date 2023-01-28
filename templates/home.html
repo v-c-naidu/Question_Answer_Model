@@ -1,0 +1,65 @@
+<html lang="en">
+<title>
+    QNA Model
+</title>
+
+<head>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+
+<body>
+    <div class="a">
+        <h1>Question And Answer Model</h1>
+        <h3>Enter context or upload img and start questioning it.....</h3>
+    </div>
+    <form id="form" action="\predict" method="post">
+        <div class="a">
+            <b>
+                <H1><label for="context">Enter Context:</label>
+            </b></H1>
+        </div>
+        <center>
+            <div>
+                <textarea class="b" id="context" name="context" rows="10" cols="100">{{ context_text }}</textarea>
+            </div>
+        </center>
+        <br>
+
+        <div class="a">
+            <b>
+                <H1><label for="myfile">Select an Image file:</label></H1>
+            </b>
+            <input type="file" id="myfile" name="myfile">
+        </div>
+
+        <div class="a">
+            <b>
+                <H1><label for="question">Enter question:</label>
+            </b></H1>
+        </div>
+        <center>
+            <div>
+                <textarea class="c" id="question" name="question" rows="10" cols="100">{{ question_text }}</textarea>
+            </div>
+        </center>
+        <center>
+            <br><br>
+            <div>
+                <input type="submit" id="submit" class="btn btn-secondary">
+            </div>
+        </center>
+
+    </form>
+    <div class="a">
+        <b>
+            <H1><label for="context">Answer is :</label>
+        </b></H1>
+    </div>
+    <center>
+        <div>
+            <textarea class="c" id="comment" name="comment" rows="10" cols="100">{{ output_text }}</textarea>
+        </div>
+    </center>
+</body>
+
+</html>
